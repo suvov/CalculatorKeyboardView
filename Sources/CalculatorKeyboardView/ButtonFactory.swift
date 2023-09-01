@@ -3,39 +3,39 @@ import UIKit
 extension CalculatorKeyboardView {
   final class ButtonFactory {
     private let titleColor = UIColor.label
-    
+
     func makeDigit(with digit: Digit) -> UIButton {
       DigitButton(digit: digit, titleColor: titleColor)
     }
-    
+
     func makeSeparator() -> UIButton {
       makeWithTitle(Locale.autoupdatingCurrent.decimalSeparator ?? ".")
     }
-    
+
     func makeBackspace() -> UIButton {
       makeWithSystemImageName("delete.left", highlighted: "delete.left.fill")
     }
-    
+
     func makeEqual() -> UIButton {
       makeWithSystemImageName("equal.circle", highlighted: "equal.circle.fill")
     }
-    
+
     func makeAddition() -> UIButton {
       makeWithSystemImageName("plus.circle", highlighted: "plus.circle.fill")
     }
-    
+
     func makeSubtraction() -> UIButton {
       makeWithSystemImageName("minus.circle", highlighted: "minus.circle.fill")
     }
-    
+
     func makeMultiplication() -> UIButton {
       makeWithSystemImageName("multiply.circle", highlighted: "multiply.circle.fill")
     }
-    
+
     func makeDivision() -> UIButton {
       makeWithSystemImageName("divide.circle", highlighted: "divide.circle.fill")
     }
-    
+
     private func makeWithSystemImageName(_ normal: String, highlighted: String) -> UIButton {
       let button = UIButton()
       button.backgroundColor = .clear
@@ -47,7 +47,7 @@ extension CalculatorKeyboardView {
       button.setImage(highlightedImage, for: .highlighted)
       return button
     }
-    
+
     private func makeWithTitle(_ title: String) -> UIButton {
       let button = UIButton()
       button.backgroundColor = .clear

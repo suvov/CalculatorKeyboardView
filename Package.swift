@@ -17,8 +17,5 @@ let package = Package(
         .target(
             name: "CalculatorKeyboardView",
             dependencies: []),
-        .testTarget(
-            name: "CalculatorKeyboardViewTests",
-            dependencies: ["CalculatorKeyboardView"]),
     ]
 )

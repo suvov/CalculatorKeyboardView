@@ -100,7 +100,6 @@ public class CalculatorKeyboardView: UIView {
   }()
 
   public init(showsCalculator: Bool = true) {
-    print("init CalculatorKeyboardView")
     self.buttonFactory = ButtonFactory()
     self.showsCalculator = showsCalculator
     super.init(frame: .zero)
